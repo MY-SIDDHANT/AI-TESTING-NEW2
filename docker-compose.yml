@@ -1,0 +1,25 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# Docker Compose for Robot Framework Tests
+#
+# Usage:
+#   Run tests:     docker-compose up --build
+#   View reports:  Open results/report.html in browser
+# ══════════════════════════════════════════════════════════════════════════════
+
+services:
+  robot-tests:
+    build: .
+    container_name: eventhub-robot-tests
+    environment:
+      - BROWSER=headlesschrome
+      - BASE_URL=https://eventhub.rahulshettyacademy.com
+      - TEST_EMAIL=${TEST_EMAIL:-test@example.com}
+      - TEST_PASSWORD=${TEST_PASSWORD:-placeholder}
+      - ALT_EMAIL=${ALT_EMAIL:-alt@example.com}
+      - ALT_PASSWORD=${ALT_PASSWORD:-placeholder}
+    volumes:
+      # Mount results directory to access reports after run
+      - ./results:/app/results
+      # Mount tests directory for live reload during development
+      - ./tests:/app/tests:ro
+    shm_size: '2gb'  # Required for Chrome to work properly

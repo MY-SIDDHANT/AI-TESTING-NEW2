@@ -1,0 +1,142 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# Robot Framework E2E Tests
+#
+# PURPOSE:
+#   Runs Robot Framework end-to-end tests on push to main branch.
+#   Uploads HTML test reports as artifacts for review.
+#
+# TRIGGERS:
+#   - Push to main branch
+#   - Manual workflow dispatch
+#
+# ARTIFACTS:
+#   - robot-test-reports: Contains log.html, report.html, output.xml
+# ══════════════════════════════════════════════════════════════════════════════
+
+name: Robot Framework E2E Tests
+
+on:
+  push:
+    branches: [main]
+  
+  # Allow manual trigger from GitHub UI
+  workflow_dispatch:
+
+# Cancel any in-progress run for the same branch when a new push arrives
+concurrency:
+  group: robot-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: '3.11'
+  BASE_URL: 'https://eventhub.rahulshettyacademy.com'
+
+jobs:
+  robot-tests:
+    name: Run Robot Framework Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+      # ── Checkout code ────────────────────────────────────────────────────────
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # ── Setup Python ─────────────────────────────────────────────────────────
+      - name: Setup Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      # ── Install Chrome browser ───────────────────────────────────────────────
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+
+      # ── Install ChromeDriver ─────────────────────────────────────────────────
+      - name: Setup ChromeDriver
+        uses: nanasess/setup-chromedriver@v2
+
+      # ── Install Python dependencies ──────────────────────────────────────────
+      - name: Install Robot Framework and dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install robotframework==7.1.1
+          pip install robotframework-seleniumlibrary==6.6.1
+          pip install webdriver-manager
+
+      # ── Verify installations ─────────────────────────────────────────────────
+      - name: Verify installations
+        run: |
+          python --version
+          robot --version
+          google-chrome --version || chrome --version || echo "Chrome version check skipped"
+          chromedriver --version
+
+      # ── Run Robot Framework tests ────────────────────────────────────────────
+      - name: Run Robot Framework Tests
+        id: robot-tests
+        continue-on-error: true
+        run: |
+          # Create results directory
+          mkdir -p results
+          
+          # Run tests with headless Chrome
+          python -m robot \
+            --outputdir results \
+            --variable BROWSER:headlesschrome \
+            --variable BASE_URL:${{ env.BASE_URL }} \
+            --loglevel INFO \
+            --timestampoutputs \
+            --name "EventHub E2E Tests" \
+            tests/
+
+      # ── Upload test reports as artifacts ─────────────────────────────────────
+      - name: Upload Robot Framework Reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: robot-test-reports
+          path: |
+            results/*.html
+            results/*.xml
+          retention-days: 30
+
+      # ── Upload screenshots on failure ────────────────────────────────────────
+      - name: Upload Screenshots (on failure)
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: robot-test-screenshots
+          path: results/*.png
+          retention-days: 7
+          if-no-files-found: ignore
+
+      # ── Generate test summary ────────────────────────────────────────────────
+      - name: Generate Test Summary
+        if: always()
+        run: |
+          echo "## 🤖 Robot Framework Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -f results/output.xml ]; then
+            # Extract test counts from output.xml
+            TOTAL=$(grep -oP 'statistics.*?total.*?pass="\K[0-9]+' results/output.xml | head -1 || echo "0")
+            FAIL=$(grep -oP 'statistics.*?total.*?fail="\K[0-9]+' results/output.xml | head -1 || echo "0")
+            
+            echo "| Metric | Count |" >> $GITHUB_STEP_SUMMARY
+            echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+            echo "| ✅ Passed | ${TOTAL:-0} |" >> $GITHUB_STEP_SUMMARY
+            echo "| ❌ Failed | ${FAIL:-0} |" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "📦 **Artifacts:** Download \`robot-test-reports\` for detailed HTML reports" >> $GITHUB_STEP_SUMMARY
+
+      # ── Fail the workflow if tests failed ────────────────────────────────────
+      - name: Check test results
+        if: steps.robot-tests.outcome == 'failure'
+        run: |
+          echo "❌ Robot Framework tests failed!"
+          exit 1

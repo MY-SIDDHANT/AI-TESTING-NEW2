@@ -78,6 +78,11 @@ jobs:
       - name: Run Robot Framework Tests
         id: robot-tests
         continue-on-error: true
+        env:
+          TEST_EMAIL: ${{ secrets.TEST_EMAIL }}
+          TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
+          ALT_EMAIL: ${{ secrets.ALT_EMAIL }}
+          ALT_PASSWORD: ${{ secrets.ALT_PASSWORD }}
         run: |
           # Create results directory
           mkdir -p results

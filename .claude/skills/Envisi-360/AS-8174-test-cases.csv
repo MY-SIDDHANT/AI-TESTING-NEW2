@@ -1,0 +1,78 @@
+Test Case ID,Requirement,Acceptance Criteria,Scenario Type,Action,Data,Expected Result,Priority
+TC-8174-001,AS-8174,Define specific column names and data format,Positive,"1. Review JSON file structure
+2. Verify all required columns are defined
+3. Compare with HSI_AssessmentSummary reference file","JSON file schema, Reference file: HSI_AssessmentSummary_Envisia_20260601000507.xlsx",All column names from reference file present in JSON definition.,High
+TC-8174-002,AS-8174,Ensure JSON file has everything needed for CSV extract,Positive,"1. Extract CSV from JSON source
+2. Verify all columns populated
+3. Validate data format matches specification","JSON file with assessment data",CSV extracted successfully with all columns. Data format matches defined specification.,High
+TC-8174-003,AS-8174,Define specific column names and data format,Data Validation,"1. Verify column name format consistency
+2. Check for naming conventions
+3. Validate no duplicate column names","JSON schema definition",Column names follow consistent naming convention. No duplicates. Names are meaningful and match reference.,High
+TC-8174-004,AS-8174,Define specific column names and data format,Data Validation,"1. Verify date/time column formats
+2. Check date format specification
+3. Test date parsing","Date columns in JSON/CSV","Date format consistent (e.g., ISO 8601 or specified format). Dates parseable without errors.",High
+TC-8174-005,AS-8174,Define specific column names and data format,Data Validation,"1. Verify numeric field formats
+2. Check decimal precision
+3. Validate number ranges","Score columns, Numeric identifiers",Numeric fields use consistent format. Appropriate precision for scores. Values within expected ranges.,High
+TC-8174-006,AS-8174,Define specific column names and data format,Data Validation,"1. Verify text field formats
+2. Check character encoding
+3. Validate special character handling","Text fields with various characters (UTF-8, special chars)",Text encoding consistent (UTF-8). Special characters preserved correctly.,Medium
+TC-8174-007,AS-8174,Ensure JSON file has everything needed for CSV extract,Positive,"1. Review Envisia JSON feed
+2. Map JSON fields to CSV columns
+3. Verify Research Team requirements covered","Envisia JSON feed, Research Team column list",All Research Team required fields present in JSON feed and mappable to CSV columns.,High
+TC-8174-008,AS-8174,Ensure JSON file has everything needed for CSV extract,Positive,"1. Compare JSON structure with Snowflake data
+2. Verify Data Team receives complete data
+3. Validate field mapping","JSON feed, Snowflake schema from Anureka's Data Team",JSON contains all data elements received in Snowflake. No missing fields.,High
+TC-8174-009,AS-8174,Ensure JSON file has everything needed for CSV extract,Negative,"1. Remove optional field from JSON
+2. Generate CSV extract
+3. Verify handling of missing data","JSON with missing optional field",CSV generated with appropriate null/empty handling for optional fields. No errors thrown.,Medium
+TC-8174-010,AS-8174,Ensure JSON file has everything needed for CSV extract,Negative,"1. Remove required field from JSON
+2. Attempt CSV extract
+3. Verify error handling","JSON with missing required field",Appropriate error message indicating missing required field. Extract fails gracefully.,High
+TC-8174-011,AS-8174,Conclude on specific column names,Data Validation,"1. Verify Assessment ID column
+2. Check format and uniqueness
+3. Validate against source system","Assessment ID values",Assessment ID column present, properly formatted, and values are unique.,High
+TC-8174-012,AS-8174,Conclude on specific column names,Data Validation,"1. Verify Participant identification columns
+2. Check for participant ID, email, name fields
+3. Validate PII handling","Participant data columns",Participant identification columns present. PII appropriately handled per requirements.,High
+TC-8174-013,AS-8174,Conclude on specific column names,Data Validation,"1. Verify Score columns from score sets
+2. Validate aggregation from assessments collection
+3. Check score calculation accuracy","Score data from assessments collection",Score columns correctly aggregated from assessments collection. Values accurate.,High
+TC-8174-014,AS-8174,Conclude on data format to be inserted,Data Validation,"1. Verify CSV delimiter
+2. Check field enclosure
+3. Validate escape character handling","CSV structural elements",CSV uses standard comma delimiter. Text fields properly enclosed. Escape characters handled correctly.,Medium
+TC-8174-015,AS-8174,Conclude on data format to be inserted,Boundary,"1. Test maximum field length
+2. Insert data at field limit
+3. Verify truncation handling","Text field at maximum length (e.g., 255 chars)",Data at maximum length accepted. Appropriate truncation or error if exceeded.,Medium
+TC-8174-016,AS-8174,Conclude on data format to be inserted,Boundary,"1. Test minimum field values
+2. Insert empty strings where allowed
+3. Verify null handling","Empty strings, Null values",Empty/null values handled according to specification. No unexpected behavior.,Medium
+TC-8174-017,AS-8174,Ensure JSON file has everything needed for CSV extract,Edge Case,"1. Test JSON with nested objects
+2. Verify flattening for CSV
+3. Validate nested data extraction","JSON with nested assessment data",Nested JSON objects properly flattened to CSV columns. Data integrity maintained.,Medium
+TC-8174-018,AS-8174,Ensure JSON file has everything needed for CSV extract,Edge Case,"1. Test JSON with array fields
+2. Verify array handling in CSV
+3. Validate multi-value representation","JSON with array elements",Array fields appropriately represented in CSV (concatenated, multiple columns, or as specified).,Medium
+TC-8174-019,AS-8174,Aggregation query for required information,API Validation,"1. Execute aggregation query against assessments collection
+2. Verify query returns required fields
+3. Validate data completeness","Aggregation query, assessments collection",Query successfully retrieves all required data from assessments collection within score sets.,High
+TC-8174-020,AS-8174,Aggregation query for required information,API Validation,"1. Test aggregation query performance
+2. Measure query execution time
+3. Verify acceptable response time","Large dataset query",Query completes within acceptable time threshold. No timeout errors.,Medium
+TC-8174-021,AS-8174,Verify CSV attachment flow,Workflow,"1. Generate CSV from JSON
+2. Create attachment
+3. Verify attachment is accessible
+4. Validate attachment content matches generated CSV","Generated CSV data",CSV attachment created successfully. Content matches generated data. Attachment accessible.,High
+TC-8174-022,AS-8174,Verify CSV attachment flow,Error Handling,"1. Simulate storage error during attachment
+2. Verify error handling
+3. Check rollback behavior","Storage failure scenario",Appropriate error message. System handles failure gracefully. No partial/corrupt attachments.,Medium
+TC-8174-023,AS-8174,Define CSV Report Structure Template,Positive,"1. Create CSV template document
+2. Include all column definitions
+3. Specify data types and formats
+4. Document constraints","Template specification",Complete CSV template document created with all columns, types, formats, and constraints.,High
+TC-8174-024,AS-8174,Define CSV Report Structure Template,Data Validation,"1. Verify template matches Envisia feed structure
+2. Cross-reference with Research Team needs
+3. Validate Snowflake compatibility","Template vs Envisia feed vs Snowflake schema",Template structure compatible with Envisia feed. Meets Research Team requirements. Maps to Snowflake.,High
+TC-8174-025,AS-8174,Define CSV Report Structure Template,Security,"1. Verify sensitive column handling in template
+2. Check PII column encryption/masking requirements
+3. Validate security specifications","Template security requirements",Sensitive/PII columns appropriately marked. Security handling specifications documented.,Medium

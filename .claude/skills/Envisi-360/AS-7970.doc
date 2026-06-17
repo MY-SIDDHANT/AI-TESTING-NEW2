@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jira</title>
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+        <style type="text/css">
+
+.tableBorder, .grid
+{
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableBorder td, .grid td
+{
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.noPadding
+{
+    padding: 0 !important;
+}
+
+h3 .subText
+{
+    font-size: 60%;
+    font-weight: normal;
+}
+
+.tabLabel
+{
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-bottom:none;
+    padding: 2px;
+    display: inline;
+}
+
+td.blank
+{
+    padding: 0;
+    margin: 0;
+}
+
+.blank td
+{
+    border: none;
+}
+
+#descriptionArea
+{
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+hr
+{
+    border-top:1px solid #aaa;
+}
+
+hr.fullcontent
+{
+  height: 15px;
+  padding: 10px 0;
+  background: #fff url('https://heidrick.atlassian.net/images/icons/hr.gif') no-repeat scroll center;
+}
+
+</style>
+
+</head>
+<body>
+
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <b><a id="parent_issue_summary" href="https://heidrick.atlassian.net/browse/AS-7970">Envisia LAQ360 CSV Extract</a></b>
+                <span style="font-size: 9px">(<a id="parent_issue_key" href="https://heidrick.atlassian.net/browse/AS-7970">AS-7970</a>)</span>
+                <h3 class="formtitle"><img src="https://heidrick.atlassian.net/images/icons/link_out_bot.gif" width="16" height="16" />
+                        [AS-8175]&nbsp;<a href="https://heidrick.atlassian.net/browse/AS-8175">LAQ360: E2E Testing for LAQ360 CSV Extract Through Admin Portal</a>
+            <span class="subText">
+               Created: 08/Jun/26                   &nbsp;Updated: 12/Jun/26
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Status:</b></td>
+        <td width="80%">To Do</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Project:</b></td>
+        <td width="80%"><a href="https://heidrick.atlassian.net/secure/BrowseProject.jspa?id=10069">Assessment</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Components:</b></td>
+            <td>
+                                        <a title="Stage"
+                href="https://heidrick.atlassian.net/issues/?jql=project%3D10069%20AND%20%22component%22%3D10512%20ORDER%20BY%20priority%20ASC"
+            >Stage</a>,                    <a title="Test"
+                href="https://heidrick.atlassian.net/issues/?jql=project%3D10069%20AND%20%22component%22%3D10514%20ORDER%20BY%20priority%20ASC"
+            >Test</a>                        </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Affects versions:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Fix versions:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+    
+            <td width="20%"><b>Parent:</b></td>
+        <td width="80%"><a href="https://heidrick.atlassian.net/browse/AS-7970">Envisia LAQ360 CSV Extract</a></td>
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Type:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Story
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Priority:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Higher 1
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Reporter:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:e65712cd-da1b-4956-8fce-c336f277fbbd"
+                id="word_reporter_712020:e65712cd-da1b-4956-8fce-c336f277fbbd"
+                href="https://heidrick.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ae65712cd-da1b-4956-8fce-c336f277fbbd">
+                    Visram, Nadim
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Assignee:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:bcb60ba9-1827-4942-ba33-c13752facf17"
+                id="word_assignee_712020:bcb60ba9-1827-4942-ba33-c13752facf17"
+                href="https://heidrick.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Abcb60ba9-1827-4942-ba33-c13752facf17">
+                    Tidke, Deepali
+                </a>
+
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Resolution:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Unresolved
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Votes:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Labels:</b>
+        </td>
+        <td id="labels-531758-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            HD-PI3-2026                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Remaining Estimate:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Time Spent:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Original estimate:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+        
+            <tr>
+            <td bgcolor="#f0f0f0" width="20%" valign="top">
+                <b>Issue links:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" class="noPadding">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="blank">
+                                            <tr>
+                            <td colspan="4" bgcolor="#f0f0f0">
+                                <b>Cloners</b><br/>
+                            </td>
+                        </tr>
+                                    <tr>
+            <td>
+                clones
+            </td>
+            <td>
+                <a href="https://heidrick.atlassian.net/browse/AS-8174">
+                     AS-8174                 </a>
+            </td>
+            <td>
+                LAQ360: Define the CSV Report Structu...
+            </td>
+            <td>
+                To Do
+            </td>
+        </tr>
+                                                                    </table>
+            </td>
+        </tr>
+    
+
+
+    
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Epic Link:</b></td>
+                <td id="customfield_10013-531758-value" class="value" bgcolor="#ffffff" width="80%">
+    <a class="aui-label ghx-label-2" href="https://heidrick.atlassian.net/browse/AS-7970">
+        Envisia LAQ360 CSV Extract
+    </a>
+</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Sprint:</b></td>
+                <td id="customfield_10018-531758-value" class="value" bgcolor="#ffffff" width="80%">AS.2026.PI3.S2</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Feature Flag:</b></td>
+                <td id="customfield_10164-531758-value" class="value" bgcolor="#ffffff" width="80%">    No
+</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Rank:</b></td>
+                <td id="customfield_10019-531758-value" class="value" bgcolor="#ffffff" width="80%">      0|i20zq7:
+  </td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <ul>
+	<li>This story captures the efforts to E2E test the LAQ360 CSV extract process through the Admin Portal.
+	<ul>
+		<li>Admin Portal Dependency.</li>
+		<li>CSV extract to be clarified.</li>
+	</ul>
+	</li>
+	<li>AC:
+	<ul>
+		<li>Within the Admin Portal, in test and stage, create a project and assign the LAQ360 to self-rater(s), raters, and leaders.</li>
+		<li>Successfully generate reports from Envisia and ensure the scoring &amp; reporting is consistent with what the Research Team &amp; Data Team seek</li>
+		<li>Document the results and notify the PO.</li>
+	</ul>
+	</li>
+</ul>
+
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+<hr class='fullcontent'><br /><br style='page-break-before:always;'/><br />
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <b><a id="parent_issue_summary" href="https://heidrick.atlassian.net/browse/AS-7970">Envisia LAQ360 CSV Extract</a></b>
+                <span style="font-size: 9px">(<a id="parent_issue_key" href="https://heidrick.atlassian.net/browse/AS-7970">AS-7970</a>)</span>
+                <h3 class="formtitle"><img src="https://heidrick.atlassian.net/images/icons/link_out_bot.gif" width="16" height="16" />
+                        [AS-8174]&nbsp;<a href="https://heidrick.atlassian.net/browse/AS-8174">LAQ360: Define the CSV Report Structure Template for LAQ360</a>
+            <span class="subText">
+               Created: 08/Jun/26                   &nbsp;Updated: 12/Jun/26
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Status:</b></td>
+        <td width="80%">To Do</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Project:</b></td>
+        <td width="80%"><a href="https://heidrick.atlassian.net/secure/BrowseProject.jspa?id=10069">Assessment</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Components:</b></td>
+            <td>
+                                        <a title="Stage"
+                href="https://heidrick.atlassian.net/issues/?jql=project%3D10069%20AND%20%22component%22%3D10512%20ORDER%20BY%20priority%20ASC"
+            >Stage</a>,                    <a title="Test"
+                href="https://heidrick.atlassian.net/issues/?jql=project%3D10069%20AND%20%22component%22%3D10514%20ORDER%20BY%20priority%20ASC"
+            >Test</a>                        </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Affects versions:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Fix versions:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+    
+            <td width="20%"><b>Parent:</b></td>
+        <td width="80%"><a href="https://heidrick.atlassian.net/browse/AS-7970">Envisia LAQ360 CSV Extract</a></td>
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Type:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Story
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Priority:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Higher 1
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Reporter:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:e65712cd-da1b-4956-8fce-c336f277fbbd"
+                id="word_reporter_712020:e65712cd-da1b-4956-8fce-c336f277fbbd"
+                href="https://heidrick.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ae65712cd-da1b-4956-8fce-c336f277fbbd">
+                    Visram, Nadim
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Assignee:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="63db0a30bf837c6893d7ef46"
+                id="word_assignee_63db0a30bf837c6893d7ef46"
+                href="https://heidrick.atlassian.net/secure/ViewProfile.jspa?accountId=63db0a30bf837c6893d7ef46">
+                    Jain, Saloni
+                </a>
+
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Resolution:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Unresolved
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Votes:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Labels:</b>
+        </td>
+        <td id="labels-531756-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            HD-PI3-2026                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Remaining Estimate:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Time Spent:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Original estimate:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+                <tr>
+            <td bgcolor="#f0f0f0" width=20% valign=top>
+                <b>Attachments:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top">
+                                    <img src="https://heidrick.atlassian.net/images/icons/attach/image.gif" height="16" width="16" border="0" alt="PNG File">
+                    image-20260611-110337.png &nbsp;&nbsp;&nbsp;
+                                    <img src="https://heidrick.atlassian.net/images/icons/attach/excel.gif" height="16" width="16" border="0" alt="Microsoft Word">
+                    HSI_AssessmentSummary_Envisia_20260601000507.xlsx &nbsp;&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+            <tr>
+            <td bgcolor="#f0f0f0" width="20%" valign="top">
+                <b>Issue links:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" class="noPadding">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="blank">
+                                            <tr>
+                            <td colspan="4" bgcolor="#f0f0f0">
+                                <b>Cloners</b><br/>
+                            </td>
+                        </tr>
+                                    <tr>
+            <td>
+                clones
+            </td>
+            <td>
+                <a href="https://heidrick.atlassian.net/browse/AS-8173">
+                     AS-8173                 </a>
+            </td>
+            <td>
+                LAQ360: Analyze the Expected CSV Extr...
+            </td>
+            <td>
+                To Do
+            </td>
+        </tr>
+                                        <tr>
+            <td>
+                is cloned by
+            </td>
+            <td>
+                <a href="https://heidrick.atlassian.net/browse/AS-8175">
+                     AS-8175                 </a>
+            </td>
+            <td>
+                LAQ360: E2E Testing for LAQ360 CSV Ex...
+            </td>
+            <td>
+                To Do
+            </td>
+        </tr>
+                                        </table>
+            </td>
+        </tr>
+    
+
+
+    
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Epic Link:</b></td>
+                <td id="customfield_10013-531756-value" class="value" bgcolor="#ffffff" width="80%">
+    <a class="aui-label ghx-label-2" href="https://heidrick.atlassian.net/browse/AS-7970">
+        Envisia LAQ360 CSV Extract
+    </a>
+</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Sprint:</b></td>
+                <td id="customfield_10018-531756-value" class="value" bgcolor="#ffffff" width="80%">AS.2026.PI3.S2</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Feature Flag:</b></td>
+                <td id="customfield_10164-531756-value" class="value" bgcolor="#ffffff" width="80%">    No
+</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Rank:</b></td>
+                <td id="customfield_10019-531756-value" class="value" bgcolor="#ffffff" width="80%">      0|i20zpr:
+  </td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <ul>
+	<li>This story captures the efforts to define the CSV Report Structure Template for LAQ360.
+	<ul>
+		<li>Scope of work here would be to conclude on the specific column names and conclude on that data and its format to be inserted</li>
+		<li>Envisia provides a feed with everything the Research Team needs. The CSV file provided by Anureka’s Data Team has everything they receive in Snowflake.</li>
+	</ul>
+	</li>
+	<li><span class="nobr"><a href="/rest/api/3/attachment/content/600893" title="HSI_AssessmentSummary_Envisia_20260601000507.xlsx attached to AS-8174" data-attachment-type="file" data-attachment-name="HSI_AssessmentSummary_Envisia_20260601000507.xlsx" data-media-services-type="file" data-media-services-id="0cd4c0aa-ab00-4eb3-8ad4-41dd19829123" rel="noreferrer">HSI_AssessmentSummary_Envisia_20260601000507.xlsx<sup><img class="rendericon" src="/images/icons/link_attachment_7.gif" height="7" width="7" align="absmiddle" alt="" border="0"/></sup></a></span></li>
+	<li>Nadim followed up with Keith to see if he has file for the Research Team to share.</li>
+	<li>AC: Ensure the JSON file has everything needed for a CSV extract.</li>
+</ul>
+
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Comments</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="grid" style="margin: 0;">
+                <tr id="comment-header-1277697"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                    
+                
+        
+            <a class="user-hover" rel="636bfd21db77c018ecd1c2b1"
+                id="word_commented_636bfd21db77c018ecd1c2b1"
+                href="https://heidrick.atlassian.net/secure/ViewProfile.jspa?accountId=636bfd21db77c018ecd1c2b1">
+                    Bhosale, Sudhir
+                </a>
+
+                                        <font size="-2">
+            [
+                <font color="#336699">11/Jun/26</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-1277697"><td bgcolor="#ffffff">
+            <p>We are good with the creation and the report structure. The remaining work is to create the aggregation query to fetch the required information from the respective collection or API. For example, we are currently retrieving data from the assessments collection within the score sets.</p>
+
+<p>Once the template is created, we need to verify the CSV attachment flow and confirm that it is working as expected.</p>
+
+<p>Please find the attached snapshot for reference.</p>
+
+<p><span class="image-wrap" style=""><img src="https://heidrick.atlassian.net/rest/api/3/attachment/content/599218" alt="image-20260611-110337.png" width="852" style="border: 0px solid black" /></span></p>
+
+<p>cc <a href="https://heidrick.atlassian.net/secure/ViewProfile.jspa?accountId=63db0a30bf837c6893d7ef46" class="user-hover" rel="63db0a30bf837c6893d7ef46" data-account-id="63db0a30bf837c6893d7ef46" accountid="63db0a30bf837c6893d7ef46" rel="noreferrer">Jain, Saloni</a> <a href="https://heidrick.atlassian.net/secure/ViewProfile.jspa?accountId=637ef8079960988ef6bdf2f0" class="user-hover" rel="637ef8079960988ef6bdf2f0" data-account-id="637ef8079960988ef6bdf2f0" accountid="637ef8079960988ef6bdf2f0" rel="noreferrer">Vagare, Amol</a> <a href="https://heidrick.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Afe2f43ac-2d6f-4e36-b148-7e8e65ba67db" class="user-hover" rel="712020:fe2f43ac-2d6f-4e36-b148-7e8e65ba67db" data-account-id="712020:fe2f43ac-2d6f-4e36-b148-7e8e65ba67db" accountid="712020:fe2f43ac-2d6f-4e36-b148-7e8e65ba67db" rel="noreferrer">Jaiswal, Nitesh</a> <a href="https://heidrick.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Abcb60ba9-1827-4942-ba33-c13752facf17" class="user-hover" rel="712020:bcb60ba9-1827-4942-ba33-c13752facf17" data-account-id="712020:bcb60ba9-1827-4942-ba33-c13752facf17" accountid="712020:bcb60ba9-1827-4942-ba33-c13752facf17" rel="noreferrer">Tidke, Deepali</a> </p>
+        </td></tr>
+            </table>
+<hr class='fullcontent'><br /><br style='page-break-before:always;'/><br />
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <b><a id="parent_issue_summary" href="https://heidrick.atlassian.net/browse/AS-7970">Envisia LAQ360 CSV Extract</a></b>
+                <span style="font-size: 9px">(<a id="parent_issue_key" href="https://heidrick.atlassian.net/browse/AS-7970">AS-7970</a>)</span>
+                <h3 class="formtitle"><img src="https://heidrick.atlassian.net/images/icons/link_out_bot.gif" width="16" height="16" />
+                        [AS-8173]&nbsp;<a href="https://heidrick.atlassian.net/browse/AS-8173">LAQ360: Analyze the Expected CSV Extract File for the Envisia Integration(Dev Only)</a>
+            <span class="subText">
+               Created: 08/Jun/26                   &nbsp;Updated: 12/Jun/26
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Status:</b></td>
+        <td width="80%">To Do</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Project:</b></td>
+        <td width="80%"><a href="https://heidrick.atlassian.net/secure/BrowseProject.jspa?id=10069">Assessment</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Components:</b></td>
+            <td>
+                                        <a title="Stage"
+                href="https://heidrick.atlassian.net/issues/?jql=project%3D10069%20AND%20%22component%22%3D10512%20ORDER%20BY%20priority%20ASC"
+            >Stage</a>,                    <a title="Test"
+                href="https://heidrick.atlassian.net/issues/?jql=project%3D10069%20AND%20%22component%22%3D10514%20ORDER%20BY%20priority%20ASC"
+            >Test</a>                        </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Affects versions:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Fix versions:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+    
+            <td width="20%"><b>Parent:</b></td>
+        <td width="80%"><a href="https://heidrick.atlassian.net/browse/AS-7970">Envisia LAQ360 CSV Extract</a></td>
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Type:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Story
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Priority:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Higher 1
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Reporter:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:e65712cd-da1b-4956-8fce-c336f277fbbd"
+                id="word_reporter_712020:e65712cd-da1b-4956-8fce-c336f277fbbd"
+                href="https://heidrick.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ae65712cd-da1b-4956-8fce-c336f277fbbd">
+                    Visram, Nadim
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Assignee:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="63db0a30bf837c6893d7ef46"
+                id="word_assignee_63db0a30bf837c6893d7ef46"
+                href="https://heidrick.atlassian.net/secure/ViewProfile.jspa?accountId=63db0a30bf837c6893d7ef46">
+                    Jain, Saloni
+                </a>
+
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Resolution:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Unresolved
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Votes:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Labels:</b>
+        </td>
+        <td id="labels-531755-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            HD-PI3-2026                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Remaining Estimate:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Time Spent:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Original estimate:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+                <tr>
+            <td bgcolor="#f0f0f0" width=20% valign=top>
+                <b>Attachments:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top">
+                                    <img src="https://heidrick.atlassian.net/images/icons/attach/excel.gif" height="16" width="16" border="0" alt="Microsoft Word">
+                    HSI_AssessmentSummary_Envisia_20260601000507.xlsx &nbsp;&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+            <tr>
+            <td bgcolor="#f0f0f0" width="20%" valign="top">
+                <b>Issue links:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" class="noPadding">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="blank">
+                                            <tr>
+                            <td colspan="4" bgcolor="#f0f0f0">
+                                <b>Cloners</b><br/>
+                            </td>
+                        </tr>
+                                                                <tr>
+            <td>
+                is cloned by
+            </td>
+            <td>
+                <a href="https://heidrick.atlassian.net/browse/AS-8174">
+                     AS-8174                 </a>
+            </td>
+            <td>
+                LAQ360: Define the CSV Report Structu...
+            </td>
+            <td>
+                To Do
+            </td>
+        </tr>
+                                                <tr>
+                            <td colspan="4" bgcolor="#f0f0f0">
+                                <b>Relates</b><br/>
+                            </td>
+                        </tr>
+                                                                <tr>
+            <td>
+                relates to
+            </td>
+            <td>
+                <a href="https://heidrick.atlassian.net/browse/AS-7970">
+                     AS-7970                 </a>
+            </td>
+            <td>
+                Envisia LAQ360 CSV Extract
+            </td>
+            <td>
+                To Do
+            </td>
+        </tr>
+                                        </table>
+            </td>
+        </tr>
+    
+
+
+    
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Epic Link:</b></td>
+                <td id="customfield_10013-531755-value" class="value" bgcolor="#ffffff" width="80%">
+    <a class="aui-label ghx-label-2" href="https://heidrick.atlassian.net/browse/AS-7970">
+        Envisia LAQ360 CSV Extract
+    </a>
+</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Sprint:</b></td>
+                <td id="customfield_10018-531755-value" class="value" bgcolor="#ffffff" width="80%"></td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Feature Flag:</b></td>
+                <td id="customfield_10164-531755-value" class="value" bgcolor="#ffffff" width="80%">    No
+</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Rank:</b></td>
+                <td id="customfield_10019-531755-value" class="value" bgcolor="#ffffff" width="80%">      0|i20zpj:
+  </td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <ul>
+	<li>This story captures the efforts to review and analyze the expected CSV extract file for LAQ360.
+	<ul>
+		<li>Scope of work here would be to conclude on the specific column names and conclude on that data and its format to be inserted</li>
+		<li>Envisia provides a feed with everything the Research Team needs. The CSV file provided by Anureka’s Data Team has everything they receive in Snowflake.</li>
+		<li><span class="nobr"><a href="/rest/api/3/attachment/content/600892" title="HSI_AssessmentSummary_Envisia_20260601000507.xlsx attached to AS-8173" data-attachment-type="file" data-attachment-name="HSI_AssessmentSummary_Envisia_20260601000507.xlsx" data-media-services-type="file" data-media-services-id="28b87725-ee29-4585-9ffb-6e8ec2a26061" rel="noreferrer">HSI_AssessmentSummary_Envisia_20260601000507.xlsx<sup><img class="rendericon" src="/images/icons/link_attachment_7.gif" height="7" width="7" align="absmiddle" alt="" border="0"/></sup></a></span></li>
+		<li>Nadim followed up with Keith to see if he has file for the Research Team to share.</li>
+	</ul>
+	</li>
+	<li>AC:
+	<ul>
+		<li>Analyze file, document the differences needed to be made in the back end for Envisia to own scoring &amp; reporting.</li>
+		<li>Confirm if Envisia’s JSON file needs to be updated.</li>
+	</ul>
+	</li>
+</ul>
+
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+<hr class='fullcontent'><br /><br style='page-break-before:always;'/><br />Generated at Mon Jun 15 10:25:34 UTC 2026 by Ingawale, Siddhant using Jira 1001.0.0-SNAPSHOT#100291-rev:2670ba5369e4f85bb36bd7a50f02472a5429936f.
+
+</body>
+</html>

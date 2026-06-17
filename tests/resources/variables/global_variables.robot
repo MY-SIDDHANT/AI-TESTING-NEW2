@@ -18,3 +18,4 @@ ${ALT_PASSWORD}          %{ALT_PASSWORD=placeholder}
 ${LOGIN_URL}             ${BASE_URL}/login
 ${BOOKINGS_URL}          ${BASE_URL}/bookings
 ${EVENTS_URL}            ${BASE_URL}/events
+#comments

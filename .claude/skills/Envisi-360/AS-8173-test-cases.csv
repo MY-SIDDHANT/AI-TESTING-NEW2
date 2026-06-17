@@ -1,0 +1,80 @@
+Test Case ID,Requirement,Acceptance Criteria,Scenario Type,Action,Data,Expected Result,Priority
+TC-8173-001,AS-8173,Analyze file and document differences for Envisia scoring & reporting,Positive,"1. Open HSI_AssessmentSummary_Envisia_20260601000507.xlsx
+2. Document all existing columns
+3. Identify data types for each column
+4. Create analysis document","Reference file: HSI_AssessmentSummary_Envisia_20260601000507.xlsx",Complete column inventory created. All columns documented with data types and descriptions.,High
+TC-8173-002,AS-8173,Analyze file and document differences for Envisia scoring & reporting,Positive,"1. Compare current backend output with reference file
+2. Identify missing columns
+3. Identify extra columns
+4. Document differences","Backend output, Reference file",Comprehensive difference document created listing all discrepancies.,High
+TC-8173-003,AS-8173,Analyze file and document differences for Envisia scoring & reporting,Data Validation,"1. Verify scoring columns in reference file
+2. Document score calculation methodology
+3. Compare with Envisia scoring logic","Score columns in reference file",Scoring methodology documented. Comparison with Envisia logic completed. Differences identified.,High
+TC-8173-004,AS-8173,Analyze file and document differences for Envisia scoring & reporting,Data Validation,"1. Identify backend changes needed for Envisia ownership
+2. Document field mappings required
+3. List transformation rules","Backend schema, Envisia requirements",Backend modification requirements documented. Field mappings defined. Transformation rules listed.,High
+TC-8173-005,AS-8173,Analyze file and document differences for Envisia scoring & reporting,Data Validation,"1. Analyze reporting columns in reference file
+2. Document report-specific fields
+3. Verify Envisia can generate equivalent reports","Reporting columns",Reporting requirements analyzed. Envisia capability for report generation confirmed or gaps identified.,High
+TC-8173-006,AS-8173,Confirm if Envisia's JSON file needs to be updated,Positive,"1. Compare current Envisia JSON structure
+2. Compare with reference CSV requirements
+3. Identify missing JSON fields
+4. Document update requirements","Current Envisia JSON, Reference CSV structure",Analysis complete. JSON update requirements documented (if any).,High
+TC-8173-007,AS-8173,Confirm if Envisia's JSON file needs to be updated,Positive,"1. Verify JSON contains all scoring fields
+2. Check score data types match requirements
+3. Validate score precision","Envisia JSON scoring fields",JSON scoring fields complete. Data types correct. Precision adequate for reporting needs.,High
+TC-8173-008,AS-8173,Confirm if Envisia's JSON file needs to be updated,Positive,"1. Verify JSON contains all participant fields
+2. Check participant identifier format
+3. Validate relationship mappings","Envisia JSON participant fields",Participant fields complete. Identifiers properly formatted. Relationships correctly mapped.,High
+TC-8173-009,AS-8173,Confirm if Envisia's JSON file needs to be updated,Negative,"1. Identify fields in CSV not present in JSON
+2. Document missing field impact
+3. Assess priority of missing fields","Gap analysis between CSV and JSON",Missing fields identified. Impact assessment completed. Priority recommendations provided.,High
+TC-8173-010,AS-8173,Confirm if Envisia's JSON file needs to be updated,Data Validation,"1. Verify JSON field data types
+2. Compare with CSV expected types
+3. Document type conversion needs","JSON field types, CSV type requirements",Data type comparison complete. Conversion requirements documented.,Medium
+TC-8173-011,AS-8173,Analyze expected CSV extract file,Positive,"1. Parse reference CSV/Excel file
+2. Count total columns
+3. Document column positions
+4. Verify header row","HSI_AssessmentSummary_Envisia_20260601000507.xlsx",File structure documented. Column count confirmed. Headers validated.,High
+TC-8173-012,AS-8173,Analyze expected CSV extract file,Data Validation,"1. Analyze data patterns in each column
+2. Identify enum/lookup values
+3. Document value constraints","Reference file data samples",Data patterns documented. Enumerated values identified. Constraints listed.,Medium
+TC-8173-013,AS-8173,Analyze expected CSV extract file,Data Validation,"1. Identify primary key columns
+2. Verify uniqueness constraints
+3. Document referential relationships","Reference file structure",Primary keys identified. Uniqueness verified. Relationships documented.,Medium
+TC-8173-014,AS-8173,Analyze expected CSV extract file,Data Validation,"1. Check for null/empty values
+2. Document nullable columns
+3. Identify required vs optional fields","Reference file data",Nullable columns identified. Required vs optional classification complete.,Medium
+TC-8173-015,AS-8173,Document differences needed for Envisia to own scoring,Positive,"1. Review current scoring implementation
+2. Compare with Envisia scoring capability
+3. Document migration requirements","Current scoring logic, Envisia capabilities",Scoring ownership transfer requirements documented. Migration path defined.,High
+TC-8173-016,AS-8173,Document differences needed for Envisia to own scoring,Data Validation,"1. Verify score calculation formulas
+2. Compare backend vs Envisia calculations
+3. Document calculation differences","Score calculation logic",Calculation methodologies compared. Differences documented. Resolution recommendations provided.,High
+TC-8173-017,AS-8173,Document differences needed for Envisia to own scoring,Data Validation,"1. Verify score normalization rules
+2. Compare normalization approaches
+3. Document standardization needs","Score normalization logic",Normalization rules compared. Standardization requirements documented.,Medium
+TC-8173-018,AS-8173,Document differences needed for Envisia to own reporting,Positive,"1. Review current reporting implementation
+2. Compare with Envisia reporting capability
+3. Document reporting migration needs","Current reporting system, Envisia capabilities",Reporting ownership transfer documented. Migration requirements listed.,High
+TC-8173-019,AS-8173,Document differences needed for Envisia to own reporting,Data Validation,"1. Compare report formats
+2. Identify format differences
+3. Document transformation requirements","Current report format, Envisia format",Report format differences documented. Transformation rules defined.,Medium
+TC-8173-020,AS-8173,Analyze expected CSV extract file,Edge Case,"1. Check for columns with mixed data types
+2. Verify data consistency within columns
+3. Document anomalies","Reference file data quality",Data quality issues identified. Anomalies documented. Recommendations provided.,Low
+TC-8173-021,AS-8173,Analyze expected CSV extract file,Edge Case,"1. Identify columns with special formatting
+2. Check for formula-based columns
+3. Document calculated fields","Reference file formulas/formatting",Calculated columns identified. Formula logic documented. CSV static equivalent defined.,Low
+TC-8173-022,AS-8173,Confirm if Envisia's JSON file needs to be updated,Workflow,"1. Create JSON update specification
+2. Define new field structures
+3. Document backward compatibility requirements","Analysis results",JSON update specification complete. Backward compatibility addressed.,High
+TC-8173-023,AS-8173,Confirm if Envisia's JSON file needs to be updated,API Validation,"1. Verify JSON schema validation
+2. Test new field additions
+3. Validate API compatibility","Updated JSON schema",JSON schema valid. New fields properly integrated. API compatibility confirmed.,High
+TC-8173-024,AS-8173,Analyze file for Envisia integration,Security,"1. Identify sensitive data columns
+2. Document data classification
+3. Verify Envisia security compliance","Reference file PII/sensitive columns",Sensitive data identified. Classification complete. Envisia compliance verified.,Medium
+TC-8173-025,AS-8173,Analyze file for Envisia integration,Data Validation,"1. Verify data from Snowflake matches reference
+2. Compare Anureka Data Team output
+3. Validate end-to-end data flow","Snowflake data, Reference file",Data flow validated. Snowflake output matches reference. Data integrity confirmed.,High

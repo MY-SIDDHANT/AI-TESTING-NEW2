@@ -1,0 +1,91 @@
+Test Case ID,Requirement,Acceptance Criteria,Scenario Type,Action,Data,Expected Result,Priority
+TC-8175-001,AS-8175,Create project and assign LAQ360 to self-rater(s) raters and leaders,Positive,"1. Login to Admin Portal (Test env)
+2. Navigate to Projects section
+3. Click 'Create New Project'
+4. Enter project details
+5. Select LAQ360 assessment type
+6. Assign self-rater(s)
+7. Assign raters
+8. Assign leaders
+9. Save project","Valid project name: 'LAQ360_Test_Project_001', Valid self-rater emails, Valid rater emails, Valid leader emails",Project created successfully with LAQ360 assigned to all specified participants. Confirmation message displayed.,High
+TC-8175-002,AS-8175,Create project and assign LAQ360 to self-rater(s) raters and leaders,Positive,"1. Login to Admin Portal (Stage env)
+2. Navigate to Projects section
+3. Click 'Create New Project'
+4. Enter project details
+5. Select LAQ360 assessment type
+6. Assign self-rater(s)
+7. Assign raters
+8. Assign leaders
+9. Save project","Valid project name: 'LAQ360_Stage_Project_001', Valid self-rater emails, Valid rater emails, Valid leader emails",Project created successfully in Stage environment with LAQ360 assigned to all specified participants.,High
+TC-8175-003,AS-8175,Create project and assign LAQ360 to self-rater(s) raters and leaders,Negative,"1. Login to Admin Portal
+2. Navigate to Projects section
+3. Click 'Create New Project'
+4. Leave project name empty
+5. Try to save","Empty project name, Valid LAQ360 assignment",Error message: 'Project name is required'. Project not created.,High
+TC-8175-004,AS-8175,Create project and assign LAQ360 to self-rater(s) raters and leaders,Negative,"1. Login to Admin Portal
+2. Create project
+3. Try to assign LAQ360 with no self-raters","Valid project name, No self-rater assigned",Error message: 'At least one self-rater is required' or system prevents saving without minimum participants.,Medium
+TC-8175-005,AS-8175,Create project and assign LAQ360 to self-rater(s) raters and leaders,Negative,"1. Login to Admin Portal
+2. Create project
+3. Assign invalid email format for raters","Valid project name, Invalid email: 'invalid-email-format'",Error message: 'Invalid email format'. Rater not added.,High
+TC-8175-006,AS-8175,Create project and assign LAQ360 to self-rater(s) raters and leaders,Boundary,"1. Login to Admin Portal
+2. Create project with maximum allowed self-raters","Project name, Maximum number of self-raters (verify limit)",System accepts maximum self-raters or displays appropriate limit message.,Medium
+TC-8175-007,AS-8175,Create project and assign LAQ360 to self-rater(s) raters and leaders,Boundary,"1. Login to Admin Portal
+2. Create project with single self-rater only","Project name, 1 self-rater, 0 raters, 0 leaders",Project created successfully with minimum participant configuration.,Medium
+TC-8175-008,AS-8175,Successfully generate reports from Envisia,Positive,"1. Complete LAQ360 assessment for project
+2. Navigate to Reports section
+3. Select project
+4. Generate CSV report from Envisia
+5. Download report","Completed LAQ360 project with all assessments done",CSV report generated successfully. Report downloads without errors.,High
+TC-8175-009,AS-8175,Ensure scoring & reporting is consistent,Positive,"1. Generate LAQ360 CSV report
+2. Compare scores in CSV with Envisia system scores
+3. Verify all score columns match","Completed assessment with known scores",Scores in CSV extract match exactly with Envisia system scores. No discrepancies found.,High
+TC-8175-010,AS-8175,Ensure scoring & reporting is consistent,Positive,"1. Generate LAQ360 CSV report
+2. Verify all data columns are populated
+3. Cross-reference with Research Team specifications","Completed LAQ360 assessment data",All expected columns present. Data format matches Research Team specifications.,High
+TC-8175-011,AS-8175,Ensure scoring & reporting is consistent,Positive,"1. Generate multiple reports for same project
+2. Compare CSV outputs","Same completed project, Multiple report generation",Reports are identical. Scoring is consistent across multiple generations.,Medium
+TC-8175-012,AS-8175,Ensure scoring & reporting is consistent,Negative,"1. Attempt to generate report for incomplete assessment
+2. Verify system behavior","LAQ360 project with incomplete assessments",System either prevents report generation or clearly indicates incomplete data status.,High
+TC-8175-013,AS-8175,Ensure scoring & reporting is consistent,Data Validation,"1. Generate CSV report
+2. Verify numeric score values are within valid range
+3. Check for null/empty values in required fields","Completed LAQ360 assessment",All numeric scores within valid range (e.g., 1-5 or defined scale). No unexpected nulls in required fields.,High
+TC-8175-014,AS-8175,Document results and notify PO,Positive,"1. Generate LAQ360 CSV report
+2. Document test results
+3. Send notification to PO","Completed test execution, Valid PO contact",Results documented in specified format. PO receives notification with test summary.,Medium
+TC-8175-015,AS-8175,E2E CSV Extract through Admin Portal,Workflow,"1. Login to Admin Portal
+2. Create new project
+3. Assign LAQ360 to participants
+4. Complete all assessments
+5. Generate CSV extract
+6. Validate extract content
+7. Document and notify","Complete test data set",End-to-end flow completes without errors. CSV extract contains accurate data for all participants.,High
+TC-8175-016,AS-8175,E2E CSV Extract through Admin Portal,Security,"1. Attempt to access Admin Portal without authentication
+2. Try to generate CSV report","No credentials, Unauthenticated session",Access denied. User redirected to login page. No data exposed.,High
+TC-8175-017,AS-8175,E2E CSV Extract through Admin Portal,Security,"1. Login with non-admin user
+2. Attempt to access LAQ360 project creation
+3. Try to generate reports","Non-admin user credentials",Appropriate access restrictions applied. Features available based on role permissions.,High
+TC-8175-018,AS-8175,E2E CSV Extract through Admin Portal,Security,"1. Generate CSV report
+2. Verify PII data handling
+3. Check for sensitive data exposure","LAQ360 report with participant PII",PII handled according to security policies. Sensitive data appropriately masked or protected.,High
+TC-8175-019,AS-8175,E2E CSV Extract through Admin Portal,UI Validation,"1. Navigate to Admin Portal
+2. Access project creation form
+3. Verify all LAQ360 fields are visible and functional","Admin Portal UI",All form fields displayed correctly. Labels accurate. Input controls functional.,Medium
+TC-8175-020,AS-8175,E2E CSV Extract through Admin Portal,UI Validation,"1. Generate CSV report
+2. Verify download functionality
+3. Check progress indicators","Report generation UI",Progress indicator displayed during generation. Download initiates properly upon completion.,Medium
+TC-8175-021,AS-8175,E2E CSV Extract through Admin Portal,Edge Case,"1. Create project with special characters in name
+2. Assign LAQ360
+3. Generate report","Project name: 'LAQ360 Test & Special @#$% Chars!'",System handles special characters appropriately. Report generated without filename issues.,Low
+TC-8175-022,AS-8175,E2E CSV Extract through Admin Portal,Edge Case,"1. Generate CSV report for very large project
+2. Monitor performance
+3. Verify data completeness","Project with maximum participants (e.g., 500+ assessments)",Report generates within acceptable time. All participant data included in extract.,Medium
+TC-8175-023,AS-8175,E2E CSV Extract through Admin Portal,Error Handling,"1. Start CSV report generation
+2. Simulate network interruption
+3. Retry report generation","Network failure during report generation",Appropriate error message displayed. System allows retry without data corruption.,Medium
+TC-8175-024,AS-8175,E2E CSV Extract through Admin Portal,Error Handling,"1. Navigate to Reports
+2. Select invalid/deleted project
+3. Attempt to generate report","Deleted or archived project ID",Error message: 'Project not found' or similar. No system crash.,Medium
+TC-8175-025,AS-8175,E2E CSV Extract through Admin Portal,Environment,"1. Execute same test scenario in Test environment
+2. Execute same test scenario in Stage environment
+3. Compare results","Identical test data in both environments",Consistent behavior across Test and Stage environments. Reports match in format and structure.,Medium
